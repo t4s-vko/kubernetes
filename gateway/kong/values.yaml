@@ -1,0 +1,27 @@
+admin:
+  enabled: true
+  type: NodePort
+  http:
+    enabled: true
+  tls:
+    enabled: false
+ingressController:
+  enabled: true
+  installCRDs: false
+autoscaling:
+  enabled: true
+  minReplicas: 3
+  maxReplicas: 6
+  targetCPUUtilizationPercentage: 80%
+proxy:
+  labels:
+    enable-metrics: "true"
+  ingress:
+    enabled: false
+deployment:
+  namespace: "kong"
+  kong:
+    enabled: true
+status:
+  http:
+    enabled: true

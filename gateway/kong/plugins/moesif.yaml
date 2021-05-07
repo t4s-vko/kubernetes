@@ -1,0 +1,9 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: moesif
+disabled: false
+config:
+  application_id: eyJhcHAiOiIxOTg6Njc0IiwidmVyIjoiMi4wIiwib3JnIjoiODg6MTIxNiIsImlhdCI6MTYxNDU1NjgwMH0.IyGwTK8VoSMOMSyNimMhBhu1E71fX20wt40CsL1w3lY
+  debug: false
+plugin: moesif

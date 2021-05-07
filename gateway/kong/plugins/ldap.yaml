@@ -1,0 +1,16 @@
+apiVersion: configuration.konghq.com/v1
+kind: KongPlugin
+metadata:
+  name: ldap-auth-lestoises
+config:
+  hide_credentials: true
+  ldap_host: srvtoises01.lestoises.local
+  ldap_port: 389
+  start_tls: false
+  ldaps: false
+  base_dn: OU=Toises Users,dc=lestoises,dc=local
+  verify_ldap_host: false
+  attribute: cn
+  cache_ttl: 60
+  header_type: ldap
+plugin: ldap-auth
