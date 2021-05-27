@@ -1,0 +1,20 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: diseases-create-batchs
+spec:
+  schedule: "*/2 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: cron-diseases
+              image: nexus.lestoises.ch/cron-diseases
+              imagePullPolicy: IfNotPresent
+              command:
+                - php
+                - /var/www/html/bin/console
+                - t4s:diseases
+                - create;
+          restartPolicy: OnFailure
