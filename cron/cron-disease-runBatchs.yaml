@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: diseases-create-batchs
 spec:
-  schedule: "*/2 * * * *"
+  schedule: "*/6 * * * *"
   jobTemplate:
     spec:
       template:
@@ -16,5 +16,5 @@ spec:
                 - php
                 - /var/www/html/bin/console
                 - t4s:diseases
-                - create
+                - runBatchs
           restartPolicy: Never
