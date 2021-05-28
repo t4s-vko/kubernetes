@@ -1,7 +1,7 @@
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: diseases-create-batchs
+  name: diseases-report-institutions-lausanne
 spec:
   schedule: "*/10 * * * *"
   jobTemplate:
@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
             - name: cron-diseases
-              image: nexus.lestoises.ch/cron-diseases
+              image: nexus.lestoises.ch/cron-diseases:0.3
               imagePullPolicy: IfNotPresent
               command:
                 - php
