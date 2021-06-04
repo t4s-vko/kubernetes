@@ -3,14 +3,14 @@ kind: CronJob
 metadata:
   name: diseases-create-batchs
 spec:
-  schedule: "*/46 * * * *"
+  schedule: "*/15 * * * *"
   jobTemplate:
     spec:
       template:
         spec:
           containers:
             - name: cronjob-diseases
-              image: nexus.lestoises.ch/cron-diseases:1.2
+              image: nexus.lestoises.ch/cron-diseases:1.9
               imagePullPolicy: IfNotPresent
               command:
                 - php
