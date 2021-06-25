@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: diseases-run-batchs
 spec:
-  schedule: "*/15 * * * *"
+  schedule: "*/13 * * * *"
   jobTemplate:
     spec:
       template:
