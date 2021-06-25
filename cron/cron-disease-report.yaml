@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: diseases-report
 spec:
-  schedule: "0 18 * * 1-5"
+  schedule: "*/20 * * * *"
   jobTemplate:
     spec:
       template:
