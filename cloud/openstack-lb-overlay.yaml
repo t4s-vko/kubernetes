@@ -1,6 +1,7 @@
 applications:
   kubeapi-load-balancer: null
   openstack-integrator:
+    constraints: cores=1 mem=2G root-disk=10G
     annotations:
       gui-x: "600"
       gui-y: "300"

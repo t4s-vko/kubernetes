@@ -1,9 +1,10 @@
+series: focal
 applications:
   apache2:
     charm: cs:apache2
     num_units: 1
     expose: true
-    constraints: "cores=1 mem=1G root-disk=8G"
+    constraints: cores=1 mem=1G root-disk=8G
     options:
       enable_modules: "headers proxy_html proxy_http"
   elasticsearch:
@@ -19,14 +20,14 @@ applications:
       kube_logs: True
   graylog:
     charm: cs:graylog
-    constraints: cores=3  mem=8G root-disk=60G
+    constraints: cores=3 mem=8G root-disk=16G
     num_units: 1
     options:
       channel: "3/stable"
   mongodb:
     charm: cs:mongodb
     num_units: 1
-    constraints: "cores=1 mem=1G root-disk=8G"
+    constraints: cores=1 mem=1G root-disk=8G
     options:
       extra_daemon_options: "--bind_ip_all"
 relations:

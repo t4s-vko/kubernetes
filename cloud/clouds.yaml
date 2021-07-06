@@ -1,0 +1,7 @@
+clouds:
+  openstack:
+    type: openstack
+    auth-types: [access-key,userpass]
+    regions:
+      RegionOne:
+        endpoint: http://172.20.40.59/identity/v3

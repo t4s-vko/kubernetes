@@ -1,3 +1,4 @@
+series: focal
 applications:
   prometheus:
     charm: cs:prometheus2
