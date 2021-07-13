@@ -1,0 +1,8 @@
+authtoken: 1lmsvyf78lgDuwpKfCj52CFxiV6_4ztVtAryq4Z31GhGBDKV4
+web_addr: 172.20.40.59:8123
+tunnels:
+  jx:
+    inspect: true
+    addr: 172.20.40.50
+    proto: http
+    subdomain: lestoises
