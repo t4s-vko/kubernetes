@@ -10,7 +10,7 @@ spec:
         spec:
           containers:
             - name: cronjob-diseases
-              image: nexus.lestoises.ch/cron-diseases:1.13
+              image: nexus.lestoises.ch/cron-diseases:1.16
               imagePullPolicy: IfNotPresent
               command:
                 - php
